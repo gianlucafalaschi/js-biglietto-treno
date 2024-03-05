@@ -9,7 +9,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 // RACCOLTA DATI UTENTE
  //chiedere chilometri
 
- const userKm = parseInt (prompt("Dimmi i chilometri"));
+const userKm = parseInt (prompt("Dimmi i chilometri"));
  console.log(userKm);
 // chiedere eta'
 const userAge = parseInt (prompt("Dimmi la tua eta'"));
