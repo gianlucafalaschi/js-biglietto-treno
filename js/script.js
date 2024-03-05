@@ -37,7 +37,7 @@ console.log(discount);
 //STAMPARE
 //stampare la cifra scontata
 
-let finalPrice = `Il costo del tuo biglietto e' di: ${priceTicket - discount} €`;
+let finalPrice = `Il costo del tuo biglietto e' di: ${(priceTicket - discount).toFixed(2)} €`;
 console.log(finalPrice);
 
 
