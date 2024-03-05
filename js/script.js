@@ -21,6 +21,7 @@ console.log(priceTicket);
 
 //SCONTO
 //calcolare sconto 20% se minorenni
+//calcolare sconto 40% se over65
 let discount;
 
 if (userAge < 18) {
@@ -35,6 +36,6 @@ console.log(discount);
 let finalPrice = priceTicket - discount;
 console.log(finalPrice)
 
-//calcolare sconto 40% se over65
+
 
 //STAMPARE
