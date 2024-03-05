@@ -16,7 +16,7 @@ const userAge = parseInt (prompt("Dimmi la tua eta'"));
  console.log(userAge);
 //CALCOLARE
 //calcolare prezzo biglietto in base ai km
-const priceTicket = `${userKm * 0.21}`;
+const priceTicket = parseFloat(`${userKm * 0.21}`);
 console.log(priceTicket);
 
 //SCONTO
