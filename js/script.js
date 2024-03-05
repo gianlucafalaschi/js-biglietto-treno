@@ -20,7 +20,7 @@ const priceTicket = parseFloat(`${userKm * 0.21}`);
 console.log(priceTicket);
 
 //SCONTO
-//calcolare sconto 20% se minorenni
+//calcolare sconto 20% se minorenni oppure
 //calcolare sconto 40% se over65
 let discount;
 
@@ -33,9 +33,12 @@ if (userAge < 18) {
 }
 console.log(discount);
 
-let finalPrice = priceTicket - discount;
-console.log(finalPrice)
-
-
 
 //STAMPARE
+//stampare la cifra scontata
+
+let finalPrice = `Il costo del tuo biglietto e' di: ${priceTicket - discount} €`;
+console.log(finalPrice);
+
+
+document.getElementById("message").innerHTML = finalPrice;
