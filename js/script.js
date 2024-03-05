@@ -6,9 +6,14 @@ va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali,
      per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca. */
 
-// RACCOLTA DATI UTENTE
- //chiedere chilometri
 
+
+
+// RACCOLTA DATI NECESSARI
+//creare costante prezzo al km
+const priceKm = 0.21
+ 
+//chiedere chilometri
 const userKm = parseInt (prompt("Dimmi i chilometri"));
  console.log(userKm);
 // chiedere eta'
@@ -16,10 +21,11 @@ const userAge = parseInt (prompt("Dimmi la tua eta'"));
  console.log(userAge);
 //CALCOLARE
 //calcolare prezzo biglietto in base ai km
-const priceTicket = parseFloat(`${userKm * 0.21}`);
+const priceTicket = parseFloat(`${userKm * priceKm}`);
 console.log(priceTicket);
 
 //SCONTO
+//conditional:
 //calcolare sconto 20% se minorenni oppure
 //calcolare sconto 40% se over65
 let discount;
@@ -33,12 +39,9 @@ if (userAge < 18) {
 }
 console.log(discount);
 
-
-//STAMPARE
-//stampare la cifra scontata
-
+//CALCOLARE PREZZO FINALE (PREZZO BIGLIETTO - SCONTO)
 let finalPrice = `Il costo del tuo biglietto e' di: ${(priceTicket - discount).toFixed(2)} €`;
 console.log(finalPrice);
-
-
+//STAMPARE
+//stampare la cifra scontata (prezzo biglietto - sconto)
 document.getElementById("message").innerHTML = finalPrice;
